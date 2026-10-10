@@ -64,4 +64,4 @@ location.reload()
 
 ## Offline design
 
-The web app runs from the Python server and persists shared complaints and demo users in `metrosuno.sqlite3` through local REST endpoints. The browser still keeps an offline-friendly local queue and the service worker caches the interface. The login and role separation are hackathon controls; production deployment should add HTTPS, hashed passwords, backend sessions, role-based access control, audit logging, rate limiting, and encrypted backups.
+The web app runs from the Python server and persists shared complaints and demo users in `metrosuno.sqlite3` through local REST endpoints. The browser loads shared complaints from SQLite, writes new complaints and status changes to SQLite, and falls back to its offline local queue when connectivity drops. The service worker caches the interface. The login and role separation are hackathon controls; production deployment should add HTTPS, hashed passwords, backend sessions, role-based access control, audit logging, rate limiting, and encrypted backups.
