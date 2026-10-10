@@ -1,5 +1,6 @@
 const loginScreen=document.querySelector('#loginScreen');
 function enter(mode){localStorage.setItem('metrosuno-session',mode);loginScreen.classList.add('hidden');if(mode==='emergency'){document.querySelector('#newBtn').textContent='＋ Emergency report';document.querySelector('.hero-copy').textContent='Emergency mode: rapidly capture and route safety-critical reports while offline.';}}
+document.querySelector('#logoutBtn').onclick=()=>{localStorage.removeItem('metrosuno-session');location.reload()};
 if(localStorage.getItem('metrosuno-session')) enter(localStorage.getItem('metrosuno-session'));
 document.querySelector('#loginBtn').onclick=()=>{let u=document.querySelector('#userInput').value.trim(),p=document.querySelector('#passInput').value.trim();if(u&&p)enter('operator');else document.querySelector('#loginMessage').textContent='Enter an Operator ID and PIN to continue.'};
 document.querySelector('#emergencyLoginBtn').onclick=()=>enter('emergency');
