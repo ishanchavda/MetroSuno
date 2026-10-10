@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b1020"><link rel="manifest" href="manifest.json">
+  <title>MetroSuno | Offline Complaint Triage</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar"><div class="brand"><span class="brand-mark">MS</span><div><h1>MetroSuno</h1><p>Every complaint heard.</p></div></div><div class="status"><span class="dot"></span><span id="connectionText">Offline-first mode</span><button id="syncBtn" class="sync-btn">↻ Sync queue <b id="syncCount">0</b></button></div></header>
+  <main>
+    <section class="hero"><div><p class="eyebrow">STATION CONTROL CENTER · LIVE PROTOTYPE</p><h2>Turn every voice into action.</h2><p class="hero-copy">Multilingual complaint triage that keeps working in tunnels, underground platforms, and weak-network zones.</p></div><div class="hero-badge"><strong id="todayCount">0</strong><span>complaints processed today</span></div></section>
+    <section class="stats"><div class="stat"><span>Urgent attention</span><strong id="urgentCount">0</strong><small>need action now</small></div><div class="stat"><span>Auto-routed</span><strong id="routedCount">0%</strong><small>to the right department</small></div><div class="stat"><span>Offline queue</span><strong id="offlineCount">0</strong><small>will sync when online</small></div><div class="stat"><span>Languages</span><strong>04</strong><small>Gujarati · Hindi · English · Gujlish</small></div></section>
+    <section class="workspace">
+      <div class="panel inbox"><div class="panel-head"><div><p class="eyebrow">INBOX</p><h3>Complaint triage</h3></div><button id="newBtn" class="primary">＋ New complaint</button></div><div class="toolbar"><div class="filters"><button class="filter active" data-filter="all">All <span id="allCount">0</span></button><button class="filter" data-filter="urgent">Urgent <span id="filterUrgent">0</span></button><button class="filter" data-filter="unsynced">Unsynced <span id="filterUnsynced">0</span></button></div><input id="search" placeholder="Search complaints…"></div><div id="complaintList" class="complaint-list"></div></div>
+      <aside class="panel queue"><div class="panel-head"><div><p class="eyebrow">OPERATIONS</p><h3>Department queues</h3></div></div><div id="queueList"></div><div class="offline-note"><span>◉</span><div><strong>Offline protection active</strong><p>All new complaints are saved locally first. Nothing is lost when the network drops.</p></div></div></aside>
+    </section>
+  </main>
+  <div id="modal" class="modal hidden"><div class="modal-card"><div class="panel-head"><div><p class="eyebrow">NEW CASE</p><h3>Log a complaint</h3></div><button id="closeBtn" class="icon-btn">×</button></div><label>Passenger complaint<textarea id="complaintInput" placeholder="Type in Gujarati, Hindi, English, or Gujlish…"></textarea></label><div class="examples"><button data-example="Lift bandh che, elderly passenger platform 2 par stuck che.">Gujlish example</button><button data-example="The escalator at the east entrance is not working.">English example</button></div><button id="analyzeBtn" class="primary full">Analyze & route complaint →</button><div id="analysisResult" class="analysis hidden"></div></div></div>
+  <script src="app.js"></script>
+</body></html>
