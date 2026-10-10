@@ -64,4 +64,4 @@ location.reload()
 
 ## Offline design
 
-The core workflow runs in the browser without external APIs. Complaints are stored in localStorage, the service worker caches the interface, and the sync button simulates synchronization after connectivity returns. The login and role separation are prototype UI controls; production deployment should use backend authentication, role-based access control, audit logging, rate limiting, and encrypted storage.
+The web app runs from the Python server and persists shared complaints and demo users in `metrosuno.sqlite3` through local REST endpoints. The browser still keeps an offline-friendly local queue and the service worker caches the interface. The login and role separation are hackathon controls; production deployment should add HTTPS, hashed passwords, backend sessions, role-based access control, audit logging, rate limiting, and encrypted backups.
