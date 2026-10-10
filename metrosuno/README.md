@@ -2,9 +2,9 @@
 
 MetroSuno is an offline-first prototype for GDG Metro Hackathon problem PS-07, **Every Complaint Heard**.
 
-## Current working version
+## Current working version (v5)
 
-The app supports two role-based journeys:
+The app supports passenger, emergency passenger, metro operator, and admin/site-manager journeys. The clean local URL is `http://127.0.0.1:8000/`; no query-string version is required.
 
 ## Demo credentials
 
@@ -43,7 +43,7 @@ cd metrosuno
 python3 server.py
 ```
 
-Open http://127.0.0.1:8000.
+Open http://127.0.0.1:8000/.
 
 For a clean login demonstration, use a private browser window or run this in the browser console:
 

@@ -36,8 +36,20 @@ Build an offline tool that accepts Gujarati, Hindi, English, and mixed Gujlish c
 
 ## MetroSuno security provisions
 
-- Normal operator login for full triage access.
-- Emergency login for rapid safety reporting during incidents.
+- Passenger self-registration and login for raising and tracking complaints.
+- Emergency passenger login for rapid safety reporting during incidents.
+- Operator login for triage and status updates.
+- Admin/site-manager login for the demo; operator accounts are admin-managed and cannot self-register.
 - Local-first storage so reports are not lost offline.
 - Spam protection for duplicates, links, repeated characters, and empty/too-short reports.
 - Human review remains available for blocked reports; filters do not silently delete submissions.
+
+## Judge demo credentials
+
+| Role | Login | Password |
+|---|---|---|
+| Passenger | `judge@example.com` | `pass1234` |
+| Metro operator | `operator` | `metro123` |
+| Admin / site manager | `admin` | `admin123` |
+
+Run the app with `python3 server.py` from the `metrosuno` directory and open `http://127.0.0.1:8000/`.
