@@ -6,6 +6,18 @@ MetroSuno is an offline-first prototype for GDG Metro Hackathon problem PS-07, *
 
 The app supports two role-based journeys:
 
+## Demo credentials
+
+Use these credentials during judging:
+
+| Role | Login | Password | Access |
+|---|---|---|---|
+| Passenger | `judge@example.com` | `pass1234` | Submit and track complaints |
+| Metro operator | `operator` | `metro123` | Triage complaints and update statuses |
+| Admin / site manager | `admin` | `admin123` | Demo staff-management login; operator accounts are admin-managed |
+
+Passenger registration is available on the login screen. Passengers can create their own account. Operators do not self-register; in the production design, the admin/site manager provisions operator accounts.
+
 ### Passenger
 
 - Passenger login
